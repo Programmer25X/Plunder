@@ -6,8 +6,11 @@ public class DCC_PC_Movement : MonoBehaviour
     [Header("Player Movement Properties")]
     [SerializeField][Tooltip("PC Jump Force Exerted")] private float _jumpForce = 8.0f;
     [SerializeField][Tooltip("PC Rotation Speed")] private float _rotationSpeed = 180f;
+    [SerializeField][Tooltip("PC Walking Speed")] private float _walkingSpeed = 10.0f;
+    [SerializeField][Tooltip("PC Sprinting Speed")] private float _sprintSpeed = 20.0f;
+ 
     private float _movementSpeed;
-    private const float _GRAVITY = 9.81f;
+    private const float _GRAVITY = 20.0f;
     private Vector3 _movementDirection = Vector3.zero;
 
 
@@ -47,10 +50,7 @@ public class DCC_PC_Movement : MonoBehaviour
     /// </summary>
     void MovePlayerCharacter()
     {
-        float walkingSpeed = 10.0f;
-        float sprintSpeed = walkingSpeed * 2;
-
-        _movementSpeed = Input.GetKey(KeyCode.LeftShift) ? walkingSpeed : sprintSpeed;
+        _movementSpeed = Input.GetKey(KeyCode.LeftShift) ? _sprintSpeed : _walkingSpeed;
 
         transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         _cameraXAxis -= Input.GetAxis("Mouse Y");
@@ -59,18 +59,20 @@ public class DCC_PC_Movement : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            _movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            _movementDirection.Normalize();
+            _movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
             _movementDirection = _movementSpeed * transform.TransformDirection(_movementDirection);
 
-            if (Input.GetButton("Jump"))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                _movementDirection.y = _jumpForce;
+                _movementDirection.y = Mathf.Sqrt(_jumpForce * 2f * _GRAVITY);
             }
         }
 
-        _movementDirection.y -= _GRAVITY * Time.deltaTime;
+        _movementDirection.y -= _GRAVITY * 2 * Time.deltaTime;
 
-        characterController.Move(_movementDirection * Time.deltaTime);
+        if (_movementDirection.magnitude >= 0.1f)
+        {
+            characterController.Move(_movementDirection * Time.deltaTime);
+        }
     }
 }

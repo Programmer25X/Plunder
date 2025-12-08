@@ -8,13 +8,11 @@ public class DCC_CarryObject : MonoBehaviour
     private Transform pcTransform;
 
     private bool isCarryingObject = false;
-    private bool hasRigidbody = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         isCarryingObject = false;
-        hasRigidbody = GetComponent<Rigidbody>() ? true : false;
         pcTransform = GameObject.FindWithTag("Player").transform;
     }
 

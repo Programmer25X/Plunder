@@ -1,12 +1,14 @@
 using UnityEngine;
 
-public class DCC_Spikes : MonoBehaviour
+public class DCC_Checkpoints : MonoBehaviour
 {
+
     private void OnTriggerEnter(Collider triggerHit)
     {
         if(triggerHit.gameObject.CompareTag("Player"))
         {
-            triggerHit.SendMessage("RecieveDamage", 100.0f);
+            triggerHit.SendMessage("SetCheckpointLocation", transform.position, SendMessageOptions.RequireReceiver);
         }
     }
+
 }

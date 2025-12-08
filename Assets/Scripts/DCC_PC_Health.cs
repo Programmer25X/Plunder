@@ -51,6 +51,11 @@ public class DCC_PC_Health : MonoBehaviour
         currentHealth -= damage;
     }
 
+    public void SetCheckpointLocation(Vector3 newCheckpointPosition)
+    {
+        respawnPosition = newCheckpointPosition; 
+    }
+
     private void UpdateHealthBar()
     {
         pcHealthBar.transform.localScale = new Vector3(currentHealth / maxHealth, 0.2f, 0.2f);

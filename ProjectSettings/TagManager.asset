@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Moving
+  - Spikes
   layers:
   - Default
   - TransparentFX

@@ -2,9 +2,7 @@ using UnityEngine;
 
 public class DCC_CarryObject : MonoBehaviour
 {
-    [Header("Carry Objects Properties")]
-    [SerializeField][Tooltip("Maximum distance the PC can grab the object. ")][Range(0.1f, 100.0f)] private float grabDistance = 2.0f;
-
+    [SerializeField][Tooltip("Activation Distance")] float interactDistance = 10.0f;
     private Transform pcTransform;
 
     private bool isCarryingObject = false;
@@ -21,17 +19,14 @@ public class DCC_CarryObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Vector3.Distance(transform.position, pcTransform.position) < grabDistance)
+            if (!isCarryingObject && Vector3.Distance(transform.position, pcTransform.position) < interactDistance)
             {
-                if (!isCarryingObject)
-                {
-                    GetComponent<Rigidbody>().useGravity = false;
-                    GetComponent<Rigidbody>().isKinematic = true;
+                GetComponent<Rigidbody>().useGravity = false;
+                GetComponent<Rigidbody>().isKinematic = true;
 
-                    transform.SetLocalPositionAndRotation(pcTransform.position + pcTransform.TransformDirection(1f, 1f, 1.5f), pcTransform.rotation);
-                    transform.parent = pcTransform;
-                    isCarryingObject = true;
-                }
+                transform.SetLocalPositionAndRotation(pcTransform.position + pcTransform.TransformDirection(0.5f, 0.5f, 0.5f), pcTransform.rotation);
+                transform.parent = pcTransform;
+                isCarryingObject = true;
             }
             else
             {
@@ -42,5 +37,32 @@ public class DCC_CarryObject : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider triggerHit)
+    {
+        if (triggerHit.gameObject.CompareTag("Player"))
+        {
+            if (!isCarryingObject)
+            {
+                SendMessage("IsHittingInteractable", true, SendMessageOptions.RequireReceiver);
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider triggerHit)
+    {
+        if (triggerHit.gameObject.CompareTag("Player"))
+        {
+            if (!isCarryingObject)
+            {
+                SendMessage("IsHittingInteractable", true, SendMessageOptions.RequireReceiver);
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider triggerHit)
+    {
+        SendMessage("IsHittingInteractable", false, SendMessageOptions.RequireReceiver);
     }
 }

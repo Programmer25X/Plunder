@@ -10,7 +10,7 @@ public class DCC_Reset_Item_Position : MonoBehaviour
 
     void Start()
     {
-        if (item)
+        if (item != null)
         {
             initialItemPosition = new Vector3(item.transform.position.x, item.transform.position.y, item.transform.position.z);
             initialItemRotation = new Vector3(item.transform.rotation.x, item.transform.rotation.y, item.transform.rotation.z);
@@ -27,9 +27,9 @@ public class DCC_Reset_Item_Position : MonoBehaviour
         {
             item.transform.parent = null;
             item.GetComponent<Rigidbody>().isKinematic = true;
-            item.transform.position = initialItemPosition; 
-            item.transform.rotation = Quaternion.Euler(initialItemRotation);
+            item.transform.SetPositionAndRotation(initialItemPosition, Quaternion.Euler(initialItemRotation));
             item.GetComponent<Rigidbody>().useGravity = true;
+
 
         }
     }

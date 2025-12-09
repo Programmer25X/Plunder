@@ -31,9 +31,6 @@ public class DCC_PC_Movement : MonoBehaviour
     void Start()
     {
         _mainCamera = Camera.main;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     // Update is called once per frame

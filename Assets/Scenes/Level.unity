@@ -15250,6 +15250,7 @@ GameObject:
   - component: {fileID: 1590815222}
   - component: {fileID: 1590815221}
   - component: {fileID: 1590815225}
+  - component: {fileID: 1590815226}
   m_Layer: 5
   m_Name: GUI
   m_TagString: Untagged
@@ -15355,6 +15356,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   compassImage: {fileID: 1483294814}
+--- !u!114 &1590815226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590815220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56925fb29d3e46449f44ace775eb698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Play Again
 --- !u!1 &1594041717
 GameObject:
   m_ObjectHideFlags: 0

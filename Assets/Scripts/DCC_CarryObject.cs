@@ -63,6 +63,9 @@ public class DCC_CarryObject : MonoBehaviour
 
     private void OnTriggerExit(Collider triggerHit)
     {
-        SendMessage("IsHittingInteractable", false, SendMessageOptions.RequireReceiver);
+        if (triggerHit.gameObject.CompareTag("Player"))
+        {
+            SendMessage("IsHittingInteractable", false, SendMessageOptions.RequireReceiver);
+        }
     }
 }

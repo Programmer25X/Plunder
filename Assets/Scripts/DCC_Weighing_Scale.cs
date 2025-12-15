@@ -36,6 +36,32 @@ public class DCC_Weighing_Scale : MonoBehaviour
         if (triggerHit.gameObject.CompareTag("Gem_3"))
         {
             isDoorOpen = false;
+            Debug.Log("Door closing...");
+        }
+
+        if (isDoorOpen && (triggerHit.gameObject.CompareTag("SmallRock1") || triggerHit.gameObject.CompareTag("SmallRock2")))
+        {
+            isDoorOpen = false;
+            Debug.Log("Door closing...");
+        }
+
+        if(isDoorOpen && triggerHit.gameObject.CompareTag("MediumRock"))
+        {
+            isDoorOpen = false;
+            Debug.Log("Door closing...");
+        }
+    }
+
+    private void OnTriggerStay(Collider triggerHit)
+    {
+        if (!triggerHit.gameObject.CompareTag("Gem_3") && triggerHit.gameObject.CompareTag("SmallRock1") && triggerHit.gameObject.CompareTag("SmallRock2"))
+        {
+            isDoorOpen = true;
+            Debug.Log("Door opening...");
+        }
+        else if (!triggerHit.gameObject.CompareTag("Gem_3") && triggerHit.gameObject.CompareTag("MediumRock"))
+        {
+            isDoorOpen = true;
             Debug.Log("Door opening...");
         }
     }
@@ -45,7 +71,7 @@ public class DCC_Weighing_Scale : MonoBehaviour
         if (triggerHit.gameObject.CompareTag("Gem_3"))
         {
             isDoorOpen = true;
-            Debug.Log("Door closing...");
+            Debug.Log("Door opening...");
         }
     }
 }

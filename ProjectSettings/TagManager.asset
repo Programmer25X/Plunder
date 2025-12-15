@@ -7,6 +7,9 @@ TagManager:
   - Moving
   - Spikes
   - Gem_3
+  - SmallRock1
+  - SmallRock2
+  - MediumRock
   layers:
   - Default
   - TransparentFX

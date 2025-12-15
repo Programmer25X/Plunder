@@ -9,6 +9,11 @@ public class DCC_Weighing_Scale : MonoBehaviour
 
     [SerializeField] private bool isDoorOpen = true;
 
+    private bool isGemOnPedestal = true;
+    private bool isSmallRockOneOnPedestal = false;
+    private bool isSmallRockTwoOnPedestal = false;
+    private bool isMediumRockOnPedestal = false;
+
     void Start()
     {
         _door = GameObject.Find("Door");
@@ -21,6 +26,16 @@ public class DCC_Weighing_Scale : MonoBehaviour
 
     void Update()
     {
+        if (isGemOnPedestal ^ (isSmallRockOneOnPedestal && isSmallRockTwoOnPedestal) ^ isMediumRockOnPedestal)
+        {
+            isDoorOpen = true;
+        }
+        else
+        {
+            isDoorOpen = false;
+        }
+
+
         if (!isDoorOpen && _door.transform.position != _closedDoorPosition)
         {
             _door.transform.position = Vector3.Lerp(_door.transform.position, _closedDoorPosition, Time.deltaTime * 2);
@@ -29,49 +44,52 @@ public class DCC_Weighing_Scale : MonoBehaviour
         {
             _door.transform.position = Vector3.Lerp(_door.transform.position, _openDoorPosition, Time.deltaTime * 2);
         }
-    }
 
-    private void OnTriggerExit(Collider triggerHit)
-    {
-        if (triggerHit.gameObject.CompareTag("Gem_3"))
-        {
-            isDoorOpen = false;
-            Debug.Log("Door closing...");
-        }
-
-        if (isDoorOpen && (triggerHit.gameObject.CompareTag("SmallRock1") || triggerHit.gameObject.CompareTag("SmallRock2")))
-        {
-            isDoorOpen = false;
-            Debug.Log("Door closing...");
-        }
-
-        if(isDoorOpen && triggerHit.gameObject.CompareTag("MediumRock"))
-        {
-            isDoorOpen = false;
-            Debug.Log("Door closing...");
-        }
-    }
-
-    private void OnTriggerStay(Collider triggerHit)
-    {
-        if (!triggerHit.gameObject.CompareTag("Gem_3") && triggerHit.gameObject.CompareTag("SmallRock1") && triggerHit.gameObject.CompareTag("SmallRock2"))
-        {
-            isDoorOpen = true;
-            Debug.Log("Door opening...");
-        }
-        else if (!triggerHit.gameObject.CompareTag("Gem_3") && triggerHit.gameObject.CompareTag("MediumRock"))
-        {
-            isDoorOpen = true;
-            Debug.Log("Door opening...");
-        }
     }
 
     private void OnTriggerEnter(Collider triggerHit)
     {
         if (triggerHit.gameObject.CompareTag("Gem_3"))
         {
-            isDoorOpen = true;
-            Debug.Log("Door opening...");
+            isGemOnPedestal = true;
+        }
+
+        if (triggerHit.gameObject.CompareTag("SmallRock1"))
+        {
+            isSmallRockOneOnPedestal = true;
+        }
+
+        if (triggerHit.gameObject.CompareTag("SmallRock2"))
+        {
+            isSmallRockTwoOnPedestal = true;
+        }
+
+        if (triggerHit.gameObject.CompareTag("MediumRock"))
+        {
+            isMediumRockOnPedestal = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider triggerHit)
+    {
+        if (triggerHit.gameObject.CompareTag("Gem_3"))
+        {
+            isGemOnPedestal = false;
+        }
+
+        if (triggerHit.gameObject.CompareTag("SmallRock1"))
+        {
+            isSmallRockOneOnPedestal = false;
+        }
+
+        if (triggerHit.gameObject.CompareTag("SmallRock2"))
+        {
+            isSmallRockTwoOnPedestal = false;
+        }
+
+        if (triggerHit.gameObject.CompareTag("MediumRock"))
+        {
+            isMediumRockOnPedestal = false;
         }
     }
 }

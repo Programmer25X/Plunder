@@ -24,7 +24,7 @@ public class DCC_CarryObject : MonoBehaviour
                 GetComponent<Rigidbody>().useGravity = false;
                 GetComponent<Rigidbody>().isKinematic = true;
 
-                transform.SetLocalPositionAndRotation(pcTransform.position + pcTransform.TransformDirection(0.5f, 0.5f, 0.5f), pcTransform.rotation);
+                transform.SetLocalPositionAndRotation(pcTransform.position + new Vector3(0, 0, 1.0f) + pcTransform.TransformDirection(0.5f, 0.5f, 0.5f), pcTransform.rotation);
                 transform.parent = pcTransform;
                 isCarryingObject = true;
             }

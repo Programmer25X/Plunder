@@ -13,7 +13,6 @@ public class DCC_PC_Movement : MonoBehaviour
     private const float _GRAVITY = 20.0f;
     private Vector3 _movementDirection = Vector3.zero;
 
-
     // Camera Variables
     private Camera _mainCamera;
     private float _cameraXAxis = 0;

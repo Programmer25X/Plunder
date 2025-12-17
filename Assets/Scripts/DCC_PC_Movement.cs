@@ -1,5 +1,5 @@
-using UnityEngine;
 using Unity.Cinemachine;
+using UnityEngine;
 
 public class DCC_PC_Movement : MonoBehaviour
 {
@@ -9,33 +9,25 @@ public class DCC_PC_Movement : MonoBehaviour
     [SerializeField][Tooltip("PC Rotation Speed")] private float _rotationSpeed = 180f;
     [SerializeField][Tooltip("PC Walking Speed")] private float _walkingSpeed = 10.0f;
     [SerializeField][Tooltip("PC Sprinting Speed")] private float _sprintSpeed = 20.0f;
- 
+
     private float _movementSpeed;
     private const float _GRAVITY = 20.0f;
     private Vector3 _movementDirection = Vector3.zero;
 
     // Camera Variables
-   // private Camera _mainCamera;
-    private float _cameraXAxis = 0;
-
+    [Header("Player Camera")]
     [SerializeField] private CinemachineCamera _cinemachineCamera;
+    private float _cameraXAxis = 0;
 
 
     // PC Character Controller
     private CharacterController characterController;
 
-
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (characterController && Time.timeScale == 1)
@@ -49,7 +41,7 @@ public class DCC_PC_Movement : MonoBehaviour
     /// </summary>
     void MovePlayerCharacter()
     {
-        if(Input.GetAxis("Vertical") > 0 && Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetAxis("Vertical") > 0 && Input.GetKey(KeyCode.LeftShift))
         {
             _movementSpeed = _sprintSpeed;
         }
@@ -58,7 +50,7 @@ public class DCC_PC_Movement : MonoBehaviour
             _movementSpeed = _walkingSpeed;
         }
 
-            transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
+        transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         _cameraXAxis -= Input.GetAxis("Mouse Y");
         _cameraXAxis = Mathf.Clamp(_cameraXAxis, -80.0f, 20.0f);
         _cinemachineCamera.transform.localRotation = Quaternion.Euler(new Vector3(_cameraXAxis, _cinemachineCamera.transform.localRotation.y, _cinemachineCamera.transform.localRotation.z));

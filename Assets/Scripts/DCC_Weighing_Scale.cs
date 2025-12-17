@@ -18,8 +18,8 @@ public class DCC_Weighing_Scale : MonoBehaviour
     {
         _door = GameObject.Find("Door");
 
-        _closedDoorPosition = new Vector3(29.7000008f, 13.3500004f, 55.0f);
-        _openDoorPosition = new Vector3(29.7000008f, 6.1500001f, 55.0f);
+        _closedDoorPosition = new Vector3(_door.transform.position.x, _door.transform.position.y, _door.transform.position.z);
+        _openDoorPosition = new Vector3(_closedDoorPosition.x, _closedDoorPosition.y - 7.25f, _closedDoorPosition.z);
 
         _door.transform.position = _openDoorPosition;
     }

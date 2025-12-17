@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class DCC_PC_Movement : MonoBehaviour
 {
@@ -14,8 +15,10 @@ public class DCC_PC_Movement : MonoBehaviour
     private Vector3 _movementDirection = Vector3.zero;
 
     // Camera Variables
-    private Camera _mainCamera;
+   // private Camera _mainCamera;
     private float _cameraXAxis = 0;
+
+    [SerializeField] private CinemachineCamera _cinemachineCamera;
 
 
     // PC Character Controller
@@ -29,7 +32,7 @@ public class DCC_PC_Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _mainCamera = Camera.main;
+        
     }
 
     // Update is called once per frame
@@ -58,7 +61,7 @@ public class DCC_PC_Movement : MonoBehaviour
             transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         _cameraXAxis -= Input.GetAxis("Mouse Y");
         _cameraXAxis = Mathf.Clamp(_cameraXAxis, -80.0f, 20.0f);
-        _mainCamera.transform.localRotation = Quaternion.Euler(new Vector3(_cameraXAxis, _mainCamera.transform.localRotation.y, _mainCamera.transform.localRotation.z));
+        _cinemachineCamera.transform.localRotation = Quaternion.Euler(new Vector3(_cameraXAxis, _cinemachineCamera.transform.localRotation.y, _cinemachineCamera.transform.localRotation.z));
 
         if (characterController.isGrounded)
         {

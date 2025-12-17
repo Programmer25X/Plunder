@@ -16,7 +16,7 @@ public class DCC_PC_Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetAxis("Vertical") > 0 && Input.GetKey(KeyCode.LeftShift))
         {
             pcAnimator.SetBool("bl_run", true);
         }
@@ -25,7 +25,7 @@ public class DCC_PC_Animation : MonoBehaviour
             pcAnimator.SetBool("bl_run", false);
         }
 
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetAxis("Vertical") > 0 && !Input.GetKey(KeyCode.LeftShift))
         {
             pcAnimator.SetBool("bl_walkForwards", true);
         }
@@ -34,7 +34,7 @@ public class DCC_PC_Animation : MonoBehaviour
             pcAnimator.SetBool("bl_walkForwards", false);
         }
 
-        if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetAxis("Vertical") < 0)
         {
             pcAnimator.SetBool("bl_walkBackwards", true);
         }

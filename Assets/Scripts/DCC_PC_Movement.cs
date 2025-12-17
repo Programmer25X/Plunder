@@ -46,16 +46,23 @@ public class DCC_PC_Movement : MonoBehaviour
     /// </summary>
     void MovePlayerCharacter()
     {
-        _movementSpeed = Input.GetKey(KeyCode.LeftShift) ? _sprintSpeed : _walkingSpeed;
+        if(Input.GetAxis("Vertical") > 0 && Input.GetKey(KeyCode.LeftShift))
+        {
+            _movementSpeed = _sprintSpeed;
+        }
+        else
+        {
+            _movementSpeed = _walkingSpeed;
+        }
 
-        transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
+            transform.Rotate(0, _rotationSpeed * Time.deltaTime * Input.GetAxis("Mouse X"), 0);
         _cameraXAxis -= Input.GetAxis("Mouse Y");
         _cameraXAxis = Mathf.Clamp(_cameraXAxis, -80.0f, 20.0f);
         _mainCamera.transform.localRotation = Quaternion.Euler(new Vector3(_cameraXAxis, _mainCamera.transform.localRotation.y, _mainCamera.transform.localRotation.z));
 
         if (characterController.isGrounded)
         {
-            _movementDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
+            _movementDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
             _movementDirection = _movementSpeed * transform.TransformDirection(_movementDirection);
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -70,5 +77,7 @@ public class DCC_PC_Movement : MonoBehaviour
         {
             characterController.Move(_movementDirection * Time.deltaTime);
         }
+
+
     }
 }

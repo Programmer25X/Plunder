@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class DCC_PressurePlate : MonoBehaviour
@@ -29,6 +30,27 @@ public class DCC_PressurePlate : MonoBehaviour
                 {
                     spawner.SetActive(true);
                 }
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider triggerHit)
+    {
+        if (triggerHit.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(WaitAndDisable(3.0f));
+        }
+    }
+
+    private IEnumerator WaitAndDisable(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        foreach (GameObject spawner in spawners)
+        {
+            if (spawner.activeSelf)
+            {
+                spawner.SetActive(false);
             }
         }
     }

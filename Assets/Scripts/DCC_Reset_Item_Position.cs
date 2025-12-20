@@ -23,7 +23,7 @@ public class DCC_Reset_Item_Position : MonoBehaviour
 
     private void OnTriggerEnter(Collider triggerHit)
     {
-        if (triggerHit.gameObject.CompareTag("Spikes"))
+        if (triggerHit.gameObject.CompareTag("Spikes") || triggerHit.gameObject.CompareTag("PressurePlate")) 
         {
             item.transform.parent = null;
             item.GetComponent<Rigidbody>().isKinematic = true;

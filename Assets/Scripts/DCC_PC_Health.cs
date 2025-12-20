@@ -11,6 +11,8 @@ public class DCC_PC_Health : MonoBehaviour
 
     private CharacterController characterController;
 
+    [SerializeField] GameObject[] spawners;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -39,21 +41,20 @@ public class DCC_PC_Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            foreach (GameObject spawner in spawners)
+            {
+                if (spawner.activeSelf)
+                {
+                    spawner.SetActive(false);
+                }
+            }
+
             characterController.enabled = false;
             transform.position = respawnPosition;
             currentHealth = maxHealth;
             characterController.enabled = true;
+
         }
-    }
-
-    public void RecieveDamage(float damage)
-    {
-        currentHealth -= damage;
-    }
-
-    public void SetCheckpointLocation(Vector3 newCheckpointPosition)
-    {
-        respawnPosition = newCheckpointPosition; 
     }
 
     private void UpdateHealthBar()
@@ -84,4 +85,15 @@ public class DCC_PC_Health : MonoBehaviour
         pcHealthBar.transform.localScale = new Vector3(1.0f, 0.2f, 0.2f);
         healthBarMaterial = pcHealthBar.GetComponent<Renderer>().material;
     }
+
+    public void RecieveDamage(float damage)
+    {
+        currentHealth -= damage;
+    }
+
+    public void SetCheckpointLocation(Vector3 newCheckpointPosition)
+    {
+        respawnPosition = newCheckpointPosition;
+    }
+
 }

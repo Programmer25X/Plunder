@@ -18,9 +18,4 @@ public class DCC_ArrowSpawner : MonoBehaviour
             timeTillNextSpawn = Time.time + coolDown;
         }
     }
-
-    public void EnableSpawner(bool enabled)
-    {
-        isEnabled = enabled;
-    }
 }

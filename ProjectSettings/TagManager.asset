@@ -10,6 +10,7 @@ TagManager:
   - SmallRock1
   - SmallRock2
   - MediumRock
+  - PressurePlate
   layers:
   - Default
   - TransparentFX

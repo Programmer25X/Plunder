@@ -28,6 +28,12 @@ public class DCC_PC_Movement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     void Update()
     {
         if (characterController && Time.timeScale == 1)

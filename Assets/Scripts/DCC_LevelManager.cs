@@ -9,7 +9,7 @@ public class DCC_LevelManager : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().name == "Level")
         {
-            if(Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 Cursor.lockState = CursorLockMode.Confined;
                 Cursor.visible = true;

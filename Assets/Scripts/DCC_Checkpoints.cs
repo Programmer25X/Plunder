@@ -7,6 +7,7 @@ public class DCC_Checkpoints : MonoBehaviour
     {
         if(triggerHit.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Activated Checkpoint");
             triggerHit.SendMessage("SetCheckpointLocation", transform.position, SendMessageOptions.RequireReceiver);
         }
     }

@@ -3,15 +3,16 @@ using UnityEngine;
 public class DCC_CarryObject : MonoBehaviour
 {
     [SerializeField][Tooltip("Activation Distance")] float interactDistance = 10.0f;
-    private Transform pcTransform;
+    [SerializeField] private Transform handTransform;
+    private Transform pcTransform; 
 
     private bool isCarryingObject = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        isCarryingObject = false;
         pcTransform = GameObject.FindWithTag("Player").transform;
+        isCarryingObject = false;
     }
 
     // Update is called once per frame
@@ -24,8 +25,8 @@ public class DCC_CarryObject : MonoBehaviour
                 GetComponent<Rigidbody>().useGravity = false;
                 GetComponent<Rigidbody>().isKinematic = true;
 
-                transform.SetLocalPositionAndRotation(pcTransform.position + new Vector3(0, 0, 1.0f) + pcTransform.TransformDirection(0.5f, 0.5f, 0.5f), pcTransform.rotation);
-                transform.parent = pcTransform;
+                transform.position = handTransform.position;
+                transform.parent = handTransform;
                 isCarryingObject = true;
             }
             else

@@ -11,6 +11,8 @@ TagManager:
   - SmallRock2
   - MediumRock
   - PressurePlate
+  - Gem_1
+  - Gem_2
   layers:
   - Default
   - TransparentFX

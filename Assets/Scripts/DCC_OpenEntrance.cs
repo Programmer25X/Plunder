@@ -17,7 +17,7 @@ public class DCC_OpenEntrance : MonoBehaviour
         _secretEntrance = GameObject.Find("Secret Entrance");
 
         _lockedPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        _unlockedPosition = new Vector3(143.5f, 9.5f, 55f);
+        _unlockedPosition = new Vector3(_lockedPosition.x - 110.0f, _lockedPosition.y, _lockedPosition.z);
     }
 
     // Update is called once per frame

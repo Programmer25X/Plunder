@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class DCC_CarryObject : MonoBehaviour
 {
-    [SerializeField][Tooltip("Activation Distance")] float interactDistance = 10.0f;
-    [SerializeField] private Transform handTransform;
+    private float _interactDistance = 2.0f;
+    private Transform handTransform;
     private Transform pcTransform; 
 
     private bool isCarryingObject = false;
@@ -12,6 +12,7 @@ public class DCC_CarryObject : MonoBehaviour
     void Start()
     {
         pcTransform = GameObject.FindWithTag("Player").transform;
+        handTransform = GameObject.Find("Hand").transform; 
         isCarryingObject = false;
     }
 
@@ -20,7 +21,7 @@ public class DCC_CarryObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!isCarryingObject && Vector3.Distance(transform.position, pcTransform.position) < interactDistance)
+            if (!isCarryingObject && Vector3.Distance(transform.position, pcTransform.position) < _interactDistance)
             {
                 GetComponent<Rigidbody>().useGravity = false;
                 GetComponent<Rigidbody>().isKinematic = true;

@@ -13,6 +13,7 @@ TagManager:
   - PressurePlate
   - Gem_1
   - Gem_2
+  - Water
   layers:
   - Default
   - TransparentFX

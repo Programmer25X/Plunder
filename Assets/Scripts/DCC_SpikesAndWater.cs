@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DCC_Spikes : MonoBehaviour
+public class DCC_SpikesAndWater : MonoBehaviour
 {
     private void OnTriggerEnter(Collider triggerHit)
     {

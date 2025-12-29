@@ -3,9 +3,16 @@ using UnityEngine;
 public class DCC_CaveEntrance : MonoBehaviour
 {
     private GameObject _playerCharacter;
+    private CharacterController _characterController; 
     private bool _canTeleport = false; 
 
     [SerializeField] private Transform _spawnPosition;
+
+    private void Start()
+    {
+        _playerCharacter = GameObject.FindWithTag("Player");
+        _characterController = _playerCharacter.GetComponent<CharacterController>();
+    }
 
     private void Update()
     {
@@ -14,16 +21,11 @@ public class DCC_CaveEntrance : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.E))
             {
                 _canTeleport = false;
-                _playerCharacter.SetActive(false);
+                _characterController.enabled = false; 
                 _playerCharacter.transform.position = _spawnPosition.transform.position;
-                _playerCharacter.SetActive(true);   
+                _characterController.enabled = true; 
             }
         }
-    }
-
-    private void Start()
-    {
-        _playerCharacter = GameObject.FindWithTag("Player");
     }
 
     private void OnTriggerEnter(Collider triggerHit)

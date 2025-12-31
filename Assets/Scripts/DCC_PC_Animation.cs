@@ -50,17 +50,13 @@ public class DCC_PC_Animation : MonoBehaviour
             _pcAnimator.SetBool("bl_run", false);
         }
 
-
-        /*
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
-            pcAnimator.SetBool("bl_jump", true);
+            _pcAnimator.SetBool("bl_jump", true); 
         }
         else
         {
-            pcAnimator.SetBool("bl_jump", false);
+            _pcAnimator.SetBool("bl_jump", false);
         }
-
-        */
     }
 }

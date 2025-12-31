@@ -7,12 +7,12 @@ public class DCC_Weighing_Scale : MonoBehaviour
     private Vector3 _closedDoorPosition = Vector3.zero;
     private Vector3 _openDoorPosition = Vector3.zero;
 
-    [SerializeField] private bool isDoorOpen = true;
-
-    private bool isGemOnPedestal = true;
-    private bool isSmallRockOneOnPedestal = false;
-    private bool isSmallRockTwoOnPedestal = false;
-    private bool isMediumRockOnPedestal = false;
+    private bool _isDoorOpen = true;
+    private bool _isGemOnPedestal = true;
+    private bool _isSmallRockOneOnPedestal = false;
+    private bool _isSmallRockTwoOnPedestal = false;
+    private bool _isMediumRockOnPedestal = false;
+    private bool _isLargeRockOnPedestal = false;
 
     void Start()
     {
@@ -26,21 +26,33 @@ public class DCC_Weighing_Scale : MonoBehaviour
 
     void Update()
     {
-        if (isGemOnPedestal ^ (isSmallRockOneOnPedestal && isSmallRockTwoOnPedestal) ^ isMediumRockOnPedestal)
+        if (_isGemOnPedestal && !_isSmallRockOneOnPedestal && !_isSmallRockTwoOnPedestal && !_isMediumRockOnPedestal && !_isLargeRockOnPedestal)
         {
-            isDoorOpen = true;
+            _isDoorOpen = true;
+        }
+        else if(_isSmallRockOneOnPedestal && _isSmallRockTwoOnPedestal && !_isMediumRockOnPedestal && !_isGemOnPedestal)
+        {
+            _isDoorOpen = true;
+        }
+        else if(_isMediumRockOnPedestal && !_isSmallRockOneOnPedestal && !_isSmallRockTwoOnPedestal && !_isGemOnPedestal)
+        {
+            _isDoorOpen = true;
+        }
+        else if(_isLargeRockOnPedestal)
+        {
+            _isDoorOpen = false;
         }
         else
         {
-            isDoorOpen = false;
+            _isDoorOpen = false; 
         }
 
 
-        if (!isDoorOpen && _door.transform.position != _closedDoorPosition)
+        if (!_isDoorOpen && _door.transform.position != _closedDoorPosition)
         {
             _door.transform.position = Vector3.Lerp(_door.transform.position, _closedDoorPosition, Time.deltaTime * 2);
         }
-        else if (isDoorOpen && _door.transform.position != _openDoorPosition)
+        else if (_isDoorOpen && _door.transform.position != _openDoorPosition)
         {
             _door.transform.position = Vector3.Lerp(_door.transform.position, _openDoorPosition, Time.deltaTime * 2);
         }
@@ -51,22 +63,27 @@ public class DCC_Weighing_Scale : MonoBehaviour
     {
         if (triggerHit.gameObject.CompareTag("Gem_3"))
         {
-            isGemOnPedestal = true;
+            _isGemOnPedestal = true;
         }
 
         if (triggerHit.gameObject.CompareTag("SmallRock1"))
         {
-            isSmallRockOneOnPedestal = true;
+            _isSmallRockOneOnPedestal = true;
         }
 
         if (triggerHit.gameObject.CompareTag("SmallRock2"))
         {
-            isSmallRockTwoOnPedestal = true;
+            _isSmallRockTwoOnPedestal = true;
         }
 
         if (triggerHit.gameObject.CompareTag("MediumRock"))
         {
-            isMediumRockOnPedestal = true;
+            _isMediumRockOnPedestal = true;
+        }
+
+        if(triggerHit.gameObject.CompareTag("LargeRock"))
+        {
+            _isLargeRockOnPedestal= true; 
         }
     }
 
@@ -74,22 +91,27 @@ public class DCC_Weighing_Scale : MonoBehaviour
     {
         if (triggerHit.gameObject.CompareTag("Gem_3"))
         {
-            isGemOnPedestal = false;
+            _isGemOnPedestal = false;
         }
 
         if (triggerHit.gameObject.CompareTag("SmallRock1"))
         {
-            isSmallRockOneOnPedestal = false;
+            _isSmallRockOneOnPedestal = false;
         }
 
         if (triggerHit.gameObject.CompareTag("SmallRock2"))
         {
-            isSmallRockTwoOnPedestal = false;
+            _isSmallRockTwoOnPedestal = false;
         }
 
         if (triggerHit.gameObject.CompareTag("MediumRock"))
         {
-            isMediumRockOnPedestal = false;
+            _isMediumRockOnPedestal = false;
+        }
+
+        if(triggerHit.gameObject.CompareTag("LargeRock"))
+        {
+            _isLargeRockOnPedestal = false;
         }
     }
 }

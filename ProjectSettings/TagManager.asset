@@ -14,6 +14,7 @@ TagManager:
   - Gem_1
   - Gem_2
   - Water
+  - LargeRock
   layers:
   - Default
   - TransparentFX

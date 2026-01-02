@@ -37,4 +37,12 @@ public class DCC_Prompt_Message : MonoBehaviour
             _messagePanel.SetActive(false);
         }
     }
+
+    private void OnDisable()
+    {
+        if (_messagePanel.activeSelf)
+        {
+            _messagePanel.SetActive(false);
+        }
+    }
 }

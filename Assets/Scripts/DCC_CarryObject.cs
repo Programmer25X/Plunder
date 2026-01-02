@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class DCC_CarryObject : MonoBehaviour
 {
+    [SerializeField] private GameObject _trigger;
+
     private float _interactDistance = 2.0f;
     private Transform _handTransform;
     private Transform _pcTransform;
@@ -9,6 +11,7 @@ public class DCC_CarryObject : MonoBehaviour
     private bool _isCarryingObject = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         _pcTransform = GameObject.FindWithTag("Player").transform;
@@ -29,14 +32,28 @@ public class DCC_CarryObject : MonoBehaviour
                 transform.position = _handTransform.position;
                 transform.parent = _handTransform;
                 _isCarryingObject = true;
+                _trigger.SetActive(false);
+
+                if(gameObject.GetComponent<DCC_Prompt_Message>().isActiveAndEnabled)
+                {
+                    gameObject.GetComponent<DCC_Prompt_Message>().enabled = false;
+                }
+
             }
             else
             {
                 _isCarryingObject = false;
                 transform.parent = null;
+                _trigger.SetActive(true);
 
                 GetComponent<Rigidbody>().useGravity = true;
                 GetComponent<Rigidbody>().isKinematic = false;
+
+                if(!gameObject.GetComponent<DCC_Prompt_Message>().isActiveAndEnabled)
+                {
+                    gameObject.GetComponent<DCC_Prompt_Message>().enabled = true;
+
+                }
             }
         }
     }

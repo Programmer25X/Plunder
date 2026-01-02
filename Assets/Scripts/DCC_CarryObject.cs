@@ -3,17 +3,17 @@ using UnityEngine;
 public class DCC_CarryObject : MonoBehaviour
 {
     private float _interactDistance = 2.0f;
-    private Transform handTransform;
-    private Transform pcTransform; 
+    private Transform _handTransform;
+    private Transform _pcTransform;
 
-    private bool isCarryingObject = false;
+    private bool _isCarryingObject = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pcTransform = GameObject.FindWithTag("Player").transform;
-        handTransform = GameObject.Find("Hand").transform; 
-        isCarryingObject = false;
+        _pcTransform = GameObject.FindWithTag("Player").transform;
+        _handTransform = GameObject.Find("Hand").transform;
+        _isCarryingObject = false;
     }
 
     // Update is called once per frame
@@ -21,53 +21,23 @@ public class DCC_CarryObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (!isCarryingObject && Vector3.Distance(transform.position, pcTransform.position) < _interactDistance)
+            if (!_isCarryingObject && Vector3.Distance(transform.position, _pcTransform.position) < _interactDistance)
             {
                 GetComponent<Rigidbody>().useGravity = false;
                 GetComponent<Rigidbody>().isKinematic = true;
 
-                transform.position = handTransform.position;
-                transform.parent = handTransform;
-                isCarryingObject = true;
+                transform.position = _handTransform.position;
+                transform.parent = _handTransform;
+                _isCarryingObject = true;
             }
             else
             {
-                isCarryingObject = false;
+                _isCarryingObject = false;
                 transform.parent = null;
 
                 GetComponent<Rigidbody>().useGravity = true;
                 GetComponent<Rigidbody>().isKinematic = false;
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider triggerHit)
-    {
-        if (triggerHit.gameObject.CompareTag("Player"))
-        {
-            if (!isCarryingObject)
-            {
-                SendMessage("IsHittingInteractable", true, SendMessageOptions.RequireReceiver);
-            }
-        }
-    }
-
-    private void OnTriggerStay(Collider triggerHit)
-    {
-        if (triggerHit.gameObject.CompareTag("Player"))
-        {
-            if (!isCarryingObject)
-            {
-                SendMessage("IsHittingInteractable", true, SendMessageOptions.RequireReceiver);
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider triggerHit)
-    {
-        if (triggerHit.gameObject.CompareTag("Player"))
-        {
-            SendMessage("IsHittingInteractable", false, SendMessageOptions.RequireReceiver);
         }
     }
 }

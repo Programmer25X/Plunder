@@ -1,43 +1,40 @@
 
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class DCC_Prompt_Message : MonoBehaviour
 {
-    [Header("GUI Properties")]
-    [SerializeField][Tooltip("Prompt message displayed on the GUI")] private string message;
-    [SerializeField] private GameObject messagePanel;
-    [SerializeField] private TextMeshProUGUI textWindow;
-
-    [SerializeField] private bool isHittingInteractable = false;
-
-    private GameObject pc;
+    [Header("GUI")]
+    [SerializeField][TextArea] private string _messageToDisplay = "Replace with appropriate message";
+    [SerializeField] private GameObject _messagePanel;
+    [SerializeField] private TextMeshProUGUI _textWindow;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pc = GameObject.FindWithTag("Player");
-        messagePanel.SetActive(false);
+        if (!_messagePanel.activeSelf)
+        {
+            _messagePanel.SetActive(false);
+        }
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (isHittingInteractable)
-        {
-            messagePanel.SetActive(true);
-            textWindow.text = message;
 
-        }
-        else if (!isHittingInteractable)
+    private void OnTriggerEnter(Collider triggerHit)
+    {
+        if (triggerHit.gameObject.CompareTag("Player"))
         {
-            messagePanel.SetActive(false);
+            _messagePanel.SetActive(true);
+            _textWindow.text = _messageToDisplay;
         }
     }
 
-    public void IsHittingInteractable(bool isPCrNear)
+    private void OnTriggerExit(Collider triggerHit)
     {
-        isHittingInteractable = isPCrNear;
+        if (triggerHit.gameObject.CompareTag("Player"))
+        {
+            _messagePanel.SetActive(false);
+        }
     }
 }

@@ -3,25 +3,20 @@ using UnityEngine.SceneManagement;
 
 public class DCC_LevelManager : MonoBehaviour
 {
-    [SerializeField][Tooltip("Name of the scene which is passed into SceneManager.LoadScene()")] private string sceneName;
-
-    private void Update()
-    {
-        if(SceneManager.GetActiveScene().name == "Level")
-        {
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-            }
-        }
-    }
     public void PlayGame()
     {
+        const string _levelScene = "Level";
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        SceneManager.LoadScene(_levelScene, LoadSceneMode.Single);
+    }
+
+    public void LoadReplay()
+    {
+        const string loadSceneName = "Play Again";
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        SceneManager.LoadScene(loadSceneName, LoadSceneMode.Single);
     }
 
 

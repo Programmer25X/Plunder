@@ -81,7 +81,7 @@ public class DCC_PC_Health : MonoBehaviour
         pcHealthBar = GameObject.CreatePrimitive(PrimitiveType.Cube);
         pcHealthBar.name = healthBarName;
         pcHealthBar.transform.parent = this.transform;
-        pcHealthBar.transform.localPosition = new Vector3(0, 3.0f, 0);
+        pcHealthBar.transform.localPosition = new Vector3(0, 2.5f, 0);
         pcHealthBar.transform.localScale = new Vector3(1.0f, 0.2f, 0.2f);
         healthBarMaterial = pcHealthBar.GetComponent<Renderer>().material;
     }

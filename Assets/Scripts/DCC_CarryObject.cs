@@ -52,7 +52,6 @@ public class DCC_CarryObject : MonoBehaviour
                 if(!gameObject.GetComponent<DCC_Prompt_Message>().isActiveAndEnabled)
                 {
                     gameObject.GetComponent<DCC_Prompt_Message>().enabled = true;
-
                 }
             }
         }

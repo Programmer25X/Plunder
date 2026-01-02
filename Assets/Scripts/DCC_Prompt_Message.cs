@@ -40,7 +40,7 @@ public class DCC_Prompt_Message : MonoBehaviour
 
     private void OnDisable()
     {
-        if (_messagePanel.activeSelf)
+        if (_messagePanel != null)
         {
             _messagePanel.SetActive(false);
         }

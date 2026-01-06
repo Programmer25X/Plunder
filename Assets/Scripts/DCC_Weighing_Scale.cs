@@ -4,8 +4,8 @@ public class DCC_Weighing_Scale : MonoBehaviour
 {
     private GameObject _door;
 
-    private Vector3 _closedDoorPosition = Vector3.zero;
-    private Vector3 _openDoorPosition = Vector3.zero;
+    private Vector3 _closedDoorPosition;
+    private Vector3 _openDoorPosition;
 
     private bool _isDoorOpen = true;
     private bool _isGemOnPedestal = true;

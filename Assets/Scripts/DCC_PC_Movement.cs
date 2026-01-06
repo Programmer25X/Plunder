@@ -1,6 +1,8 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
+
 public class DCC_PC_Movement : MonoBehaviour
 {
     // Player Movement Variables
@@ -15,8 +17,7 @@ public class DCC_PC_Movement : MonoBehaviour
     private Vector3 _movementDirection = Vector3.zero;
 
     // Camera Variables
-    [Header("Player Camera")]
-    [SerializeField] private CinemachineCamera _cinemachineCamera;
+    private CinemachineCamera _cinemachineCamera;
     private float _cameraXAxis = 0;
 
 
@@ -30,6 +31,7 @@ public class DCC_PC_Movement : MonoBehaviour
 
     private void Start()
     {
+        _cinemachineCamera = FindAnyObjectByType<CinemachineCamera>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -78,7 +80,5 @@ public class DCC_PC_Movement : MonoBehaviour
         {
             characterController.Move(_movementDirection * Time.deltaTime);
         }
-
-
     }
 }

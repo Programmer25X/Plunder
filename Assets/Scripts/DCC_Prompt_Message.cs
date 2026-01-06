@@ -25,7 +25,7 @@ public class DCC_Prompt_Message : MonoBehaviour
     {
         if (triggerHit.gameObject.CompareTag("Player"))
         {
-            ActivatePanel(true); 
+            ActivatePanel(true);
             _textWindow.text = _messageToDisplay;
         }
     }

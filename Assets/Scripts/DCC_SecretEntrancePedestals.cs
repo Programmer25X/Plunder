@@ -1,32 +1,32 @@
-using System.Net.Sockets;
 using UnityEngine;
 
 public class DCC_SecretEntrancePedestals : MonoBehaviour
 {
+    [Header("Pedestal Properties")]
     [SerializeField] private string _pedestalName;
 
-    private DCC_OpenEntrance openEntrance;
+    private DCC_OpenEntrance _openEntrance;
 
     private void Start()
     {
-        openEntrance = GameObject.Find("Secret Entrance").GetComponent<DCC_OpenEntrance>();
+        _openEntrance = GameObject.Find("Secret Entrance").GetComponent<DCC_OpenEntrance>();
     }
 
     private void OnTriggerEnter(Collider triggerHit)
     {
         if (_pedestalName == "Red" && triggerHit.gameObject.CompareTag("Gem_3"))
         {
-            openEntrance.SetIsRedGemPlaced(true);
+            _openEntrance.SetIsRedGemPlaced(true);
         }
 
         if (_pedestalName == "Yellow" && triggerHit.gameObject.CompareTag("Gem_2"))
         {
-            openEntrance.SetIsYellowGemPlaced(true); 
+            _openEntrance.SetIsYellowGemPlaced(true);
         }
 
         if (_pedestalName == "Blue" && triggerHit.gameObject.CompareTag("Gem_1"))
         {
-            openEntrance.SetIsBlueGemPlaced(true);
+            _openEntrance.SetIsBlueGemPlaced(true);
         }
     }
 
@@ -34,17 +34,17 @@ public class DCC_SecretEntrancePedestals : MonoBehaviour
     {
         if (_pedestalName == "Red" && triggerHit.gameObject.CompareTag("Gem_3"))
         {
-            openEntrance.SetIsRedGemPlaced(false);
+            _openEntrance.SetIsRedGemPlaced(false);
         }
 
         if (_pedestalName == "Yellow" && triggerHit.gameObject.CompareTag("Gem_2"))
         {
-            openEntrance.SetIsYellowGemPlaced(false);
+            _openEntrance.SetIsYellowGemPlaced(false);
         }
 
         if (_pedestalName == "Blue" && triggerHit.gameObject.CompareTag("Gem_1"))
         {
-            openEntrance.SetIsBlueGemPlaced(false);
+            _openEntrance.SetIsBlueGemPlaced(false);
         }
     }
 }

@@ -3,13 +3,10 @@ using UnityEngine;
 public class DCC_PC_Animation : MonoBehaviour
 {
     private Animator _pcAnimator; 
-    private CharacterController _characterController;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _characterController = GetComponent<CharacterController>();
         _pcAnimator = GetComponentInChildren<Animator>();
     }
 

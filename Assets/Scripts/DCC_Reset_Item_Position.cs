@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DCC_Reset_Item_Position : MonoBehaviour
 {
+    [Header("Interactable Item")]
     [SerializeField][Tooltip("The item the PC can pick-up and drop")] private GameObject _item;
 
     private Vector3 _initialItemPosition;
@@ -24,8 +25,6 @@ public class DCC_Reset_Item_Position : MonoBehaviour
             _item.GetComponent<Rigidbody>().isKinematic = true;
             _item.transform.SetPositionAndRotation(_initialItemPosition, Quaternion.Euler(_initialItemRotation));
             _item.GetComponent<Rigidbody>().useGravity = true;
-
-
         }
     }
 }

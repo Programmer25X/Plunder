@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
+
 public class DCC_Cheats : MonoBehaviour
 {
     [Header("Cheat Teleport Locations")]

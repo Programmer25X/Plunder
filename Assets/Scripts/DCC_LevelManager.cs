@@ -19,7 +19,6 @@ public class DCC_LevelManager : MonoBehaviour
         SceneManager.LoadScene(loadSceneName, LoadSceneMode.Single);
     }
 
-
     public void ExitGame()
     {
         Application.Quit();

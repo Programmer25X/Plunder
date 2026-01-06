@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DCC_ChildToParent : MonoBehaviour
 {
+    [Header("Parent Objects Properties")]
     [SerializeField][Tooltip("Tag of the Parent Object")] private string _parentTag = "Moving";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

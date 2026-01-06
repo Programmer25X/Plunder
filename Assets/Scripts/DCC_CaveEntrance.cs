@@ -1,11 +1,13 @@
 using UnityEngine;
 
+
 public class DCC_CaveEntrance : MonoBehaviour
 {
     private GameObject _playerCharacter;
     private CharacterController _characterController; 
-    private bool _canTeleport = false; 
+    private bool _canTeleport = false;
 
+    [Header("Cave Spawn Position")]
     [SerializeField] private Transform _spawnPosition;
 
     private void Start()

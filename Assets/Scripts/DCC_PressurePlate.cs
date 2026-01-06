@@ -3,9 +3,8 @@ using UnityEngine;
 
 public class DCC_PressurePlate : MonoBehaviour
 {
+    [Header("Spawners")]
     [SerializeField] GameObject[] spawners;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Start()
     {

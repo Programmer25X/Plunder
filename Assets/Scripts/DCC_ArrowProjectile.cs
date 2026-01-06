@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class DCC_ArrowProjectile : MonoBehaviour
 {
     private float _distance = 50.0f;

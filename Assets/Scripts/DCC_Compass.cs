@@ -1,11 +1,16 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DCC_Compass : MonoBehaviour
+public class DCC_CompassAndCoin : MonoBehaviour
 {
     [Header("Compass GUI Element")]
     [SerializeField][Tooltip("Sprite for the GUI Compass")] private Image compassImage; 
     private GameObject playerCharacter;
+
+    [Header("Coin Counter GUI Element")]
+    [SerializeField] private TextMeshProUGUI _coinCounter;
+    private int _numberOfCoins = 0; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,5 +33,11 @@ public class DCC_Compass : MonoBehaviour
         {
             compassImage.rectTransform.eulerAngles = new Vector3(0, 0, playerCharacter.transform.eulerAngles.y);
         }
+    }
+
+    public void IncreaseCoinCount()
+    {
+        _numberOfCoins++; 
+        _coinCounter.text = _numberOfCoins.ToString();
     }
 }

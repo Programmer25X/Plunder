@@ -15,7 +15,7 @@ public class DCC_Prompt_Message : MonoBehaviour
     {
         if (!_messagePanel.activeSelf)
         {
-            _messagePanel.SetActive(false);
+            ActivatePanel(false);
         }
     }
 
@@ -25,7 +25,7 @@ public class DCC_Prompt_Message : MonoBehaviour
     {
         if (triggerHit.gameObject.CompareTag("Player"))
         {
-            _messagePanel.SetActive(true);
+            ActivatePanel(true); 
             _textWindow.text = _messageToDisplay;
         }
     }
@@ -34,7 +34,7 @@ public class DCC_Prompt_Message : MonoBehaviour
     {
         if (triggerHit.gameObject.CompareTag("Player"))
         {
-            _messagePanel.SetActive(false);
+            ActivatePanel(false);
         }
     }
 
@@ -42,7 +42,12 @@ public class DCC_Prompt_Message : MonoBehaviour
     {
         if (_messagePanel != null)
         {
-            _messagePanel.SetActive(false);
+            ActivatePanel(false);
         }
+    }
+
+    public void ActivatePanel(bool isActive)
+    {
+        _messagePanel.SetActive(isActive);
     }
 }

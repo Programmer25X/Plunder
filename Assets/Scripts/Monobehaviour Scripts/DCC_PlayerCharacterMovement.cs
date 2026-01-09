@@ -1,7 +1,7 @@
 using Unity.Cinemachine;
 using UnityEngine;
 
-public class DCC_PlayerCharacterMovement : MonoBehaviour
+public class DCC_PC_Movement : MonoBehaviour
 {
     // Player Movement Variables
     [Header("Player Movement Properties")]

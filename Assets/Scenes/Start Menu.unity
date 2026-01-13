@@ -1107,6 +1107,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 725966372}
+    - target: {fileID: 6892821567061481772, guid: 0c7a39ec7a6b0824489fa7f4996c9837, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.41
+      objectReference: {fileID: 0}
     - target: {fileID: 8499375093453693840, guid: 0c7a39ec7a6b0824489fa7f4996c9837, type: 3}
       propertyPath: m_Name
       value: Island

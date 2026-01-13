@@ -16,7 +16,6 @@ public class DCC_Checkpoints : MonoBehaviour
         {
             if (!_isFinalCheckpoint)
             {
-                Debug.Log("Activated Checkpoint");
                 triggerHit.SendMessage("SetCheckpointLocation", transform.position, SendMessageOptions.DontRequireReceiver);
             }
             else

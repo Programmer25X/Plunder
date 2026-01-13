@@ -63,7 +63,7 @@ public class DCC_PC_Movement : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            _movementDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+            _movementDirection = new Vector3(0, 0, Input.GetAxisRaw("Vertical")).normalized;
             _movementDirection = _movementSpeed * transform.TransformDirection(_movementDirection);
 
             if (Input.GetKeyDown(KeyCode.Space))

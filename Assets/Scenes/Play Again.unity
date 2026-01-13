@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 5cd776ddf96fd7f43a37d66afd0b8bbb, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 26e437cbc64b834498b37d1f7690fe92, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -151,6 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56925fb29d3e46449f44ace775eb698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _HUD: {fileID: 0}
+  _messagePanel: {fileID: 0}
+  _pauseMenu: {fileID: 0}
 --- !u!114 &19184063
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,3 +12,13 @@ Plunder is a 3D pirate-themed puzzle game protoype which was created in the Unit
 - A Weighing-scale Puzzle
 - A Hidden Path Puzzle
 - A functional heads-up display (HUD)
+
+## Tools & Languages
+Tools
+- Unity 6
+- Visual Studio
+- GitHub
+
+Languages
+- C#
+

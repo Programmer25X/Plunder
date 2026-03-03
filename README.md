@@ -4,10 +4,10 @@
 </picture>
 
 ## Overview
-Plunder is a 3D pirate-themed puzzle game protoype which was created in the Unity 6. In the game, the player plays as a pirate who has arrived on a deserted island to solve a series of puzzles to find a lost treasure. 
+Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to solve four unique puzzles to find a lost treasure. The game was planned and developed over the course of three months from October 2025 to January 2026. The game was developed by Unity 6, Visual Studio and GitHub for version control.
 
 ## Current Game Features
-- One functional level, which consists of an interior environment.
+- One functional level, which consists of an interior and exterior environment.
 - A Parkour Challenge
 - A Weighing-scale Puzzle
 - A Hidden Path Puzzle
@@ -25,3 +25,13 @@ Plunder is a 3D pirate-themed puzzle game protoype which was created in the Unit
 ## Media
 <img width="1918" height="890" alt="PlunderStartImage" src="https://github.com/user-attachments/assets/4e375f84-dfc5-4e2f-88a2-300c2ed7f98b" />
 <img width="1914" height="890" alt="PlunderImage" src="https://github.com/user-attachments/assets/124d28d8-afeb-428a-b9e5-42e902ec6afa" />
+
+## Reflection
+Developing *Plunder* has improved my undrstanding of monobehaviour scripts, scriptable objects, render textures, ProBuilder, Unity's terrain tool and optimisation techniques. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion through the use of emotionsl triggers during gameplay. Working on this project has provided me with the opprtunity to develop my skills further, which I will be able to use when working on future projects.
+
+## Used Assets & Creditation
+
+Disclaimer: The prototype was developed for educational and portfolio purposes only. To my knowledge, all third-party assets used and their creators have been listed, with appropriate credit being given to the creators for their wo`rk. I do not claim any ownership of any third-party assets used. If there are any issues regarding the use of these assets or the credits, please contact me.
+
+
+

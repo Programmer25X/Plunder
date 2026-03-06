@@ -4,10 +4,10 @@
 </picture>
 
 ## Overview
-Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to solve four unique puzzles to find a lost treasure. The game was planned and developed over the course of three months from October 2025 to January 2026. The game was developed by Unity 6, Visual Studio and GitHub for version control.
+Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to solve four unique puzzles to find a lost treasure. The game was planned and developed over the course of three months from October 2025 to January 2026. The game was developed by using Unity 6, Visual Studio and Git version control.
 
 ## Current Game Features
-- One functional level, which consists of an interior and exterior environment.
+- One functional level, which consists of an interior and exterior environment
 - A Parkour Challenge
 - A Weighing-scale Puzzle
 - A Hidden Path Puzzle
@@ -17,7 +17,7 @@ Plunder is a 3D pirate-themed puzzle game protoype in which the player character
 ### Tools
 - Unity 6
 - Visual Studio
-- GitHub
+- Git
 
 ### Languages
 - C#
@@ -31,7 +31,13 @@ Developing *Plunder* has improved my undrstanding of monobehaviour scripts, scri
 
 ## Used Assets & Creditation
 
-Disclaimer: The prototype was developed for educational and portfolio purposes only. To my knowledge, all third-party assets used and their creators have been listed, with appropriate credit being given to the creators for their wo`rk. I do not claim any ownership of any third-party assets used. If there are any issues regarding the use of these assets or the credits, please contact me.
+Disclaimer: The prototype was developed for **educational and portfolio purposes only**. To my knowledge, all third-party assets used and their creators have been listed, with appropriate credit being given to the creators for their work. I **do not** claim any ownership of any third-party assets used. If there are any issues regarding the use of these assets or the credits, please contact me.
+
+### 3D Models and Environments
+
+### Sound 
+- [**pirate at sea orgen music**](https://freesound.org/people/klavo1985/sounds/324566/) - By klavo1985, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Retro, Coin 05**](https://freesound.org/people/LilMati/sounds/443258/?page=4#comments) - By LilMati, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 
 

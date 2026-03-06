@@ -34,6 +34,13 @@ Developing *Plunder* has improved my undrstanding of monobehaviour scripts, scri
 Disclaimer: The prototype was developed for **educational and portfolio purposes only**. To my knowledge, all third-party assets used and their creators have been listed, with appropriate credit being given to the creators for their work. I **do not** claim any ownership of any third-party assets used. If there are any issues regarding the use of these assets or the credits, please contact me.
 
 ### 3D Models and Environments
+- [**Pirate Kit**](https://quaternius.com/packs/piratekit.html) - By Quaternius, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Graveyard Kit**](https://www.kenney.nl/assets/graveyard-kit) - By Kenney, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Mini Dungeon**](https://www.kenney.nl/assets/mini-dungeon) - By Kenney, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Pirate Kit**](https://opengameart.org/content/pirate-kit) - By Kenney, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Low Poly RPG Bundle (Gold, Gems etc.) Part 1**](https://gualtierisgg.itch.io/low-poly-mini-rpg-bundle-gold-gems-etc) - By GualtierisGG, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Ultimate Nature Pack**](https://quaternius.itch.io/150-lowpoly-nature-models) - By Quaternius, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Modular Weapons Pack**](https://quaternius.com/packs/medievalweapons.html) - By Quaternius, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) 
 
 ### 2D Art
 - [**Old Parchment Paper**](https://opengameart.org/content/old-parchment-paper) - By cron, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -43,6 +50,7 @@ Disclaimer: The prototype was developed for **educational and portfolio purposes
 - [**Coast Sand 01**](https://polyhaven.com/a/coast_sand_01) - By Rob Tuytel, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 - [**Rocky Terrain 02**](https://polyhaven.com/a/rocky_terrain_02) - By Amal Kumar, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 - [**Rough Wood**](https://polyhaven.com/a/rough_wood) - By Rob Tuytel, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Rock 05*](https://polyhaven.com/a/rock_05) - By Rob Tuytel, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 
 ### Sound 
 - [**pirate at sea orgen music**](https://freesound.org/people/klavo1985/sounds/324566/) - By klavo1985, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

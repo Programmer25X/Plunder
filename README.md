@@ -35,6 +35,15 @@ Disclaimer: The prototype was developed for **educational and portfolio purposes
 
 ### 3D Models and Environments
 
+### 2D Art
+- [**Old Parchment Paper**](https://opengameart.org/content/old-parchment-paper) - By cron, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Compass**](https://opengameart.org/content/compass) - By JotaFaD, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+
+### Textures
+- [**Coast Sand 01**](https://polyhaven.com/a/coast_sand_01) - By Rob Tuytel, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Rocky Terrain 02**](https://polyhaven.com/a/rocky_terrain_02) - By Amal Kumar, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+- [**Rough Wood**](https://polyhaven.com/a/rough_wood) - By Rob Tuytel, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+
 ### Sound 
 - [**pirate at sea orgen music**](https://freesound.org/people/klavo1985/sounds/324566/) - By klavo1985, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
 - [**Retro, Coin 05**](https://freesound.org/people/LilMati/sounds/443258/?page=4#comments) - By LilMati, licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)

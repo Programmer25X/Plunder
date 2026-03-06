@@ -4,7 +4,7 @@
 </picture>
 
 ## Overview
-Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to solve four unique puzzles to find a lost treasure. The game was planned and developed over the course of three months from October 2025 to January 2026. The game was developed by using Unity 6, Visual Studio and Git version control.
+Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to o find a lost treasure. To locate the treasure the player must solve solve four unique puzzles. The game was planned and developed over the course of three months from October 2025 to January 2026.
 
 ## Current Game Features
 - One functional level, which consists of an interior and exterior environment
@@ -27,7 +27,7 @@ Plunder is a 3D pirate-themed puzzle game protoype in which the player character
 <img width="1914" height="890" alt="PlunderImage" src="https://github.com/user-attachments/assets/124d28d8-afeb-428a-b9e5-42e902ec6afa" />
 
 ## Reflection
-Developing *Plunder* has improved my undrstanding of monobehaviour scripts, scriptable objects, render textures, ProBuilder, Unity's terrain tool and optimisation techniques. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion through the use of emotionsl triggers during gameplay. Working on this project has provided me with the opprtunity to develop my skills further, which I will be able to use when working on future projects.
+Developing Plunder has improved my understanding of: monobehaviour scripts, and scriptable objects to implement game mechanics and systems; render textures; ProBuilder to create greybox environments; Unity's terrain tool, and optimisation techniques to enhance performance. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion using emotional triggers during gameplay. Working on this project has provided me with the opportunity to develop my skills further, which I will be able to use when working on future projects.
 
 ## Used Assets & Creditation
 

@@ -4,7 +4,7 @@
 </picture>
 
 ## Overview
-Plunder is a 3D pirate-themed puzzle game protoype in which the player character is a pirate who has arrived on a deserted island to o find a lost treasure. To locate the treasure the player must solve solve four unique puzzles. The game was planned and developed over the course of three months from October 2025 to January 2026.
+Plunder is a 3D pirate-themed puzzle game prototype in which the player character is a pirate who has arrived on a deserted island to o find a lost treasure. To locate the treasure the player must solve four unique puzzles. The game was planned and developed over the course of three months from October 2025 to January 2026.
 
 ## Current Game Features
 - One functional level, which consists of an interior and exterior environment

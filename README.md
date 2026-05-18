@@ -4,7 +4,7 @@
 </picture>
 
 ## Overview
-Plunder is a 3D pirate-themed puzzle game prototype in which the player character is a pirate who has arrived on a deserted island to o find a lost treasure. To locate the treasure the player must solve four unique puzzles. The game was planned and developed over the course of three months from October 2025 to January 2026.
+Plunder is a 3D pirate-themed puzzle game prototype in which the player character is a pirate who has arrived on a deserted island to find a lost treasure. To locate the treasure the player must solve four unique puzzles. The game has been in development since October 2025. 
 
 ## Current Game Features
 - One functional level, which consists of an interior and exterior environment
@@ -29,7 +29,7 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 ## Reflection
 Developing Plunder has improved my understanding of: monobehaviour scripts and scriptable objects to implement game mechanics and systems; render textures; ProBuilder to create greybox environments; Unity's terrain tool, and optimisation techniques to enhance performance. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion using emotional triggers during gameplay. Working on this project has provided me with the opportunity to develop my skills further, which I will be able to use when working on future projects.
 
-## Used Assets & Creditation
+## Used Assets & Credits
 
 Disclaimer: The prototype was developed for **educational and portfolio purposes only**. To my knowledge, all third-party assets used and their creators have been listed, with appropriate credit being given to the creators for their work. I **do not** claim any ownership of any third-party assets used. If there are any issues regarding the use of these assets or the credits, please contact me.
 

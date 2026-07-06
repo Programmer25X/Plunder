@@ -6,12 +6,16 @@
 ## Overview
 Plunder is a 3D pirate-themed puzzle game prototype in which the player character is a pirate who has arrived on a deserted island to find a lost treasure. To locate the treasure the player must solve four unique puzzles. The game has been in development since October 2025. 
 
+----
+
 ## Current Game Features
 - One functional level, which consists of an interior and exterior environment
 - A Parkour Challenge
 - A Weighing-scale Puzzle
 - A Hidden Path Puzzle
 - A functional heads-up display (HUD)
+
+----
 
 ## Tools & Languages
 ### Tools
@@ -22,9 +26,13 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 ### Languages
 - C#
 
+----
+
 ## Media
 <img width="1918" height="890" alt="PlunderStartImage" src="https://github.com/user-attachments/assets/4e375f84-dfc5-4e2f-88a2-300c2ed7f98b" />
 <img width="1914" height="890" alt="PlunderImage" src="https://github.com/user-attachments/assets/124d28d8-afeb-428a-b9e5-42e902ec6afa" />
+
+----
 
 ## Gained Skills
 - **Organisational Skills**: Planned, designed, implemented and tested my project, whilst ensuring to use source control and maintaining backups
@@ -32,10 +40,14 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 - **Testing & Debugging**: Throughout the development process, I repeatedly debugged and tested the source code and handle any warnings or errors
 - **Documentation**: Produced thorough documentation throughout the entire planning, design, implementation, testing and evaluation phases
 - **Unity**: Created MonoBehaviour scripts and ScriptableObjects, and utilised the UI Toolkit, Cinemachines, Render Textures, ProBuilder, Terrain Tool, Lighting System and Animator Controller
-- **Optimising Performance**: Improved the game's performance by using occlusion culling and ScriptableObjects 
+- **Optimising Performance**: Improved the game's performance by using occlusion culling and ScriptableObjects
+
+----
 
 ## Reflection
 Developing Plunder has improved my understanding of: monobehaviour scripts and scriptable objects to implement game mechanics and systems; render textures; ProBuilder to create greybox environments; Unity's terrain tool, and optimisation techniques to enhance performance. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion using emotional triggers during gameplay. Working on this project has provided me with the opportunity to develop my skills further, which I will be able to use when working on future projects.
+
+----
 
 ## Used Assets & Credits
 

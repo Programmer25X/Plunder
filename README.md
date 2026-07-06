@@ -31,6 +31,7 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 - **Computational Thinking**: Used computational methods including *decomposition, abstraction and visualisation*
 - **Testing & Debugging**: Throughout the development process, I repeatedly debugged and tested the source code and handle any warnings or errors
 - **Documentation**: Produced thorough documentation throughout the entire planning, design, implementation, testing and evaluation phases
+- **Unity**: Created MonoBehaviour scripts and ScriptableObjects, and utilised the UI Toolkit, Cinemachines, Render Textures, ProBuilder, Terrain Tool, Lighting System and Animator Controller
 - **Optimising Performance**: Improved the game's performance by using occlusion culling and ScriptableObjects 
 
 ## Reflection

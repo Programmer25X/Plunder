@@ -29,9 +29,9 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 ## Gained Skills
 - **Organisational Skills**: Planned, designed, implemented and tested my project, whilst ensuring to use source control and maintaining backups
 - **Computational Thinking**: Used computational methods including *decomposition, abstraction and visualisation*
-- **Testing & Debugging**: Throughout the development process, I repeatedly debuged and tested the source code and handle any warnings or errors
+- **Testing & Debugging**: Throughout the development process, I repeatedly debugged and tested the source code and handle any warnings or errors
 - **Documentation**: Produced thorough documentation throughout the entire planning, design, implementation, testing and evaluation phases
-- **Optimising Performace**: Improved the game's performance by using occlusion culling and ScriptableObjects 
+- **Optimising Performance**: Improved the game's performance by using occlusion culling and ScriptableObjects 
 
 ## Reflection
 Developing Plunder has improved my understanding of: monobehaviour scripts and scriptable objects to implement game mechanics and systems; render textures; ProBuilder to create greybox environments; Unity's terrain tool, and optimisation techniques to enhance performance. Additionally, I have gained a deeper understanding of player experience and how to evoke emotion using emotional triggers during gameplay. Working on this project has provided me with the opportunity to develop my skills further, which I will be able to use when working on future projects.

@@ -17,6 +17,14 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 
 ----
 
+## Technical Details
+- **Puzzles & Challenges**: The puzzles and challenges were implemented by using various data types, components and triggers, enabling the player to interact with in-game objects and utilise physics
+- **Dynamic Graphics User Interface (GUI)**: Render textures and the UI Toolkit were used to create dynamic start and replay menus and the heads-up display (HUD)
+- **Greyboxing**: ProBuilder was utilised to effectively greybox the game's environment before props and textures were added into the scene
+- **Animation State Machine**: The Animator window and control structures were used to implement an animation state machine for the player character
+
+----
+
 ## Tools & Languages
 ### Tools
 - Unity 6
@@ -36,7 +44,7 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 
 ## Gained Skills
 - **Organisational Skills**: Planned, designed, implemented and tested my project, whilst ensuring to use source control and maintaining backups
-- **Computational Thinking**: Used computational methods including *decomposition, abstraction and visualisation*
+- **Computational Thinking**: Used computational methods including decomposition, abstraction and visualisation
 - **Testing & Debugging**: Throughout the development process, I repeatedly debugged and tested the source code and handle any warnings or errors
 - **Documentation**: Produced thorough documentation throughout the entire planning, design, implementation, testing and evaluation phases
 - **Unity**: Created MonoBehaviour scripts and ScriptableObjects, and utilised the UI Toolkit, Cinemachines, Render Textures, ProBuilder, Terrain Tool, Lighting System and Animator Controller

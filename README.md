@@ -38,9 +38,16 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 
 ## Media
 <img width="1918" height="890" alt="PlunderStartImage" src="https://github.com/user-attachments/assets/4e375f84-dfc5-4e2f-88a2-300c2ed7f98b" />
+<caption>Start menu</caption>
 <img width="1914" height="890" alt="PlunderImage" src="https://github.com/user-attachments/assets/124d28d8-afeb-428a-b9e5-42e902ec6afa" />
+<caption>Gameplay</caption>
 
-### Video
+<p></p>
+
+[**Portfolio Page**](https://djcc11.brighton.domains/portfolio/plunder/)
+
+[**Play on itch.io**](https://programmer025x.itch.io/treasure-hunter) 
+
 [**Gameplay Video**](https://vimeo.com/1208493172#t=0)
 
 ----

@@ -40,6 +40,9 @@ Plunder is a 3D pirate-themed puzzle game prototype in which the player characte
 <img width="1918" height="890" alt="PlunderStartImage" src="https://github.com/user-attachments/assets/4e375f84-dfc5-4e2f-88a2-300c2ed7f98b" />
 <img width="1914" height="890" alt="PlunderImage" src="https://github.com/user-attachments/assets/124d28d8-afeb-428a-b9e5-42e902ec6afa" />
 
+### Video
+[**Gameplay Video**](https://vimeo.com/1208493172#t=0)
+
 ----
 
 ## Gained Skills

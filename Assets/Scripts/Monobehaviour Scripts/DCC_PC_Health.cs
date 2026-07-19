@@ -6,8 +6,9 @@ public class DCC_PC_Health : MonoBehaviour
     private float currentHealth;
     private Vector3 respawnPosition;
 
+    [SerializeField] private Material healthBarMaterial;
+
     private GameObject pcHealthBar;
-    private Material healthBarMaterial;
 
     private CharacterController characterController;
 
@@ -83,7 +84,7 @@ public class DCC_PC_Health : MonoBehaviour
         pcHealthBar.transform.parent = this.transform;
         pcHealthBar.transform.localPosition = new Vector3(0, 2.5f, 0);
         pcHealthBar.transform.localScale = new Vector3(1.0f, 0.2f, 0.2f);
-        healthBarMaterial = pcHealthBar.GetComponent<Renderer>().material;
+        pcHealthBar.GetComponent<Renderer>().material = healthBarMaterial;
     }
 
     public void RecieveDamage(float damage)
